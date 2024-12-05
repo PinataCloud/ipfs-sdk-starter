@@ -5,8 +5,10 @@ const pinata = new PinataSDK({
 	pinataGateway: process.env.GATEWAY_URL,
 });
 
+// Create a file object using Web API for Files
 const file = new File(["Hello World!"], "hello.txt");
 
+// Upload the file
 const upload = await pinata.upload.file(file);
 // Optional methods
 // .addMetadata({
